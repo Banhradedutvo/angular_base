@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form Đăng ký</title>
+
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-gray-200">
+    <div class="flex justify-center items-center h-screen container">
+        <div class="max-w-sm">
+            <h2 class="text-2xl font-bold mb-4">Form Đăng ký</h2>
+
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="mb-4">
+                <div class="mb-4">
+                    <label for="userName" class="block">Tên người dùng:</label>
+                    <input type="text" id="userName" formControlName="userName" required
+                        class="border border-gray-300 px-4 py-2 rounded">
+                    <div *ngIf="registerForm.get('userName')!.invalid && (registerForm.get('userName')!.touched || registerForm.get('userName')!.dirty)"
+                        class="text-red-500 mt-2">
+                        Tên người dùng là bắt buộc.
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label for="email" class="block">Email:</label>
+                    <input type="email" id="email" formControlName="email" required
+                        class="border border-gray-300 px-4 py-2 rounded">
+                    <div *ngIf="registerForm.get('email')!.invalid && (registerForm.get('email')!.touched || registerForm.get('email')!.dirty)"
+                        class="text-red-500 mt-2">
+                        <div *ngIf="registerForm.get('email')!.hasError('required')">Email là bắt buộc.</div>
+                        <div *ngIf="registerForm.get('email')!.hasError('email')">Định dạng email không hợp lệ.</div>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label for="password" class="block">Mật khẩu:</label>
+                    <input type="password" id="password" formControlName="password" required
+                        class="border border-gray-300 px-4 py-2 rounded">
+                    <div *ngIf="registerForm.get('password')!.invalid && (registerForm.get('password')!.touched || registerForm.get('password')!.dirty)"
+                        class="text-red-500 mt-2">
+                        Mật khẩu là bắt buộc.
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label for="confirmPassword" class="block">Xác nhận mật khẩu:</label>
+                    <input type="password" id="confirmPassword" formControlName="confirmPassword" required
+                        class="border border-gray-300 px-4 py-2 rounded">
+                    <div *ngIf="registerForm.get('confirmPassword')!.invalid && (registerForm.get('confirmPassword')!.touched || registerForm.get('confirmPassword')!.dirty)"
+                        class="text-red-500 mt-2">
+                        <div *ngIf="registerForm.get('confirmPassword')!.hasError('required')">Mật khẩu xác nhận là bắt
+                            buộc.</div>
+                        <div *ngIf="registerForm.get('password')!.value !== registerForm.get('confirmPassword')!.value">
+                            Mật khẩu xác nhận không khớp.</div>
+                    </div>
+                </div>
+
+                <!-- Thêm các trường khác trong form -->
+
+                <button type="submit" [disabled]="registerForm.invalid"
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                    Đăng ký
+                </button>
+            </form>
+
+            <div *ngIf="registrationSuccess" class="mt-4">
+                <p class="font-bold">{{ registrationMessage }}</p>
+                <p>Tên người dùng: {{ registeredUser?.userName }}</p>
+                <p>Email: {{ registeredUser?.email }}</p>
+            </div>
+
+            <div *ngIf="!registrationSuccess && registrationMessage !== ''" class="mt-4">
+                <p class="text-red-500">{{ registrationMessage }}</p>
+                <p>Vui lòng kiểm tra lại thông tin và thử lại.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

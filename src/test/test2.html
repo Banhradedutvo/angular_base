@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Custom styles */
+    .gradient {
+      background: linear-gradient(45deg, #8EA6DB, #E8CBC0);
+    }
+  </style>
+</head>
+<body>
+  <div class="flex flex-col md:flex-row min-h-screen">
+    <!-- Sidebar -->
+    <aside class="sidebar bg-blue-900 text-gray-100 w-64 flex-shrink-0">
+      <!-- Logo -->
+      <div class="logo p-4">
+        <h1 class="text-white text-2xl font-bold">Dashboard</h1>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="navigation px-4 py-2">
+        <ul class="space-y-2">
+          <li>
+            <a routerLink="/" class="nav-link text-gray-300 hover:text-white flex items-center">
+              <svg class="icon h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+              Home
+            </a>
+          </li>
+          <li>
+            <a routerLink="/admin" class="nav-link text-gray-300 hover:text-white flex items-center">
+              <svg class="icon h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"></path>
+              </svg>
+              Dashboard
+            </a>
+          </li>
+          <li class="group">
+            <a routerLink="/admin/product" class="nav-link text-gray-300 hover:text-white flex items-center">
+              <svg class="icon h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+              Product
+            </a>
+            <ul class="submenu hidden group-hover:block bg-blue-800 text-gray-300 p-2 mt-2 rounded-md">
+              <!-- Add more submenu items here -->
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content flex-1 bg-gray-200">
+      <!-- Breadcrumb Navigation -->
+      <nav class="breadcrumb-navigation bg-white px-4 py-2">
+        <ol class="list-none flex">
+          <li><a href="#" class="breadcrumb-link text-gray-500">Dashboard</a></li>
+          <li><span class="breadcrumb-separator text-gray-400 mx-2">/</span></li>
+          <li><a href="#" class="breadcrumb-link text-gray-500">Product</a></li>
+          <li><span class="breadcrumb-separator text-gray-400 mx-2">/</span></li>
+          <li><span class="breadcrumb-current text-gray-900">Overview</span></li>
+        </ol>
+      </nav>
+
+      <!-- Tab Navigation -->
+      <nav class="tab-navigation bg-white px-4 py-2">
+        <ul class="flex space-x-4">
+          <li><a href="#" class="tab-link text-gray-500 hover:text-gray-900font-bold">Tổng quan</a></li>
+          <li><a href="#" class="tab-link text-gray-500 hover:text-gray-900">Báo cáo</a></li>
+          <li><a href="#" class="tab-link text-gray-500 hover:text-gray-900">Cài đặt</a></li>
+          <li><a href="#" class="tab-link text-gray-500 hover:text-gray-900">Trợ giúp</a></li>
+        </ul>
+      </nav>
+
+      <!-- Content -->
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</body>
+</html>

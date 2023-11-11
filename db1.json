@@ -1,0 +1,82 @@
+[
+    {
+    
+      "name": "Áo phông nam",
+      "price": 99.999,
+      "description": "Áo phông nam màu trắng, kiểu dáng thời trang, chất liệu cotton cao cấp. Phù hợp cho mọi dịp.",
+      "image": "https://picsum.photos/200/300",
+      "id_category": "1"
+    },
+    {
+   
+      "name": "Quần jean nữ",
+      "price": 159.99,
+      "description": "Quần jean nữ màu xanh đậm, chất liệu denim cao cấp, ôm sát và thoải mái. Tạo nên phong cách cá nhân của bạn.",
+      "image": "https://picsum.photos/200/300",
+      "id_category": 2
+    },
+    {
+ 
+      "name": "Giày thể thao",
+      "price": 299.99,
+      "description": "Giày thể thao nam màu đen, phong cách hiện đại, đế cao su chống trơn trượt. Đồng hành cùng bạn trong mọi hoạt động thể thao.",
+      "image": "https://picsum.photos/200/300",
+      "id_category": 1
+    },
+    {
+
+      "name": "Đầm dạ hội",
+      "price": 249.99,
+      "description": "Đầm dạ hội nữ sang trọng, phù hợp cho các dịp đặc biệt như tiệc cưới, lễ hội. Chất liệu cao cấp và thiết kế tinh tế.",
+      "image": "https://picsum.photos/200/300",
+      "id_category": 1
+    },
+    {
+
+      "name": "Balo du lịch",
+      "price": 89.99,
+      "description": "Balo du lịch chất liệu chống nước, nhiều ngăn tiện lợi, dung tích lớn. Đồng hành cùng bạn trên mọi chuyến đi.",
+      "image": "https://picsum.photos/200/300",
+      "id_category": 1
+    },
+    {
+
+      "name": "Đồng hồ nam",
+      "price": 499.99,
+      "description": "Đồng hồ nam mạ vàng, dây da cao cấp, chống nước 50m. Mang đến phong cách lịch lãm và sang trọng.",
+      "image": "https://picsum.photos/200/300",
+      "id_category": 2
+    },
+    {
+
+      "name": "Ví nữ",
+      "price": 79.99,
+      "description": "Ví nữ da thật, nhiều ngăn đựng tiện dụng, thiết kế nhỏ gọn. Điểm nhấn hoàn hảo cho phong cách của bạn.",
+      "image": "https://picsum.photos/200/300",
+      "id_category": 1
+    },
+    {
+
+      "name": "Áo khoác nam",
+      "price": 179.99,
+      "description": "Áo khoác nam chất liệu dù, cổ cao giữ ấm tốt, thiết kế hiện đại. Đồng hành cùng bạn trong mùa đông lạnh giá.",
+      "image": "https://picsum.photos/200/300",
+      "id_category": 2
+    },
+    {
+
+      "name": "Váy công sở",
+      "price": 129.99,
+      "description": "Váy công sở nữ thanh lịch, phù hợp môi trường làm việc, chất liệu thoáng mát. Tự tin và nổi bật trong công việc.",
+      "image": "https://picsum.photos/200/300",
+      "id_category": 1
+    },
+    {
+ 
+      "name": "Giày cao gót",
+      "price": 199.99,
+      "description": "Giày cao gót nữ màu đỏ, kiểu dáng đẹp, thoải mái. Tạo nên sự quyến rũ và tự tin cho ngày đặc biệt.",
+      "image": "https://picsum.photos/200/300",
+      "id_category": 2
+    }
+  ]

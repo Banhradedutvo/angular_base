@@ -1,0 +1,15 @@
+/* Thêm các lớp CSS cho phần tử cha */
+.overflow-x-auto {
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  /* Giữ đúng chiều rộng của các ô trong bảng */
+  .table {
+    table-layout: fixed;
+  }
+  
+  /* Tăng độ rộng của ô chứa mô tả */
+  .description-cell {
+    width: 400px;
+  }

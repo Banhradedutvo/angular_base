@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .nav-link:hover {
+      background-color: #64748b;
+    }
+    .content-box:hover {
+      transform: translateY(-5px);
+      transition: transform 0.3s ease;
+    }
+    
+  </style>
+</head>
+
+<body class="bg-gray-200">
+ <app-header />
+  <main class="container mx-auto py-8">
+    <router-outlet />
+  </main>
+ <app-footer/>
+</body>
+
+</html>

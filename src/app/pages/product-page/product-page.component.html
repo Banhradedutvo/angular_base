@@ -1,0 +1,35 @@
+<!-- Hiển thị danh sách danh mục -->
+<div class="mb-4">
+  <table class="min-w-full divide-y divide-gray-200">
+    <input type="text" [(ngModel)]="searchTerm" placeholder="Tìm kiếm" class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+    <label for="category">Category:</label>
+    <select id="category" class="ml-2" [(ngModel)]="currentCategory" (change)="filterByCategory($event)">
+      <option value="">All Categories</option>
+      <option *ngFor="let category of categories" [value]="category.id">{{ category.name }}</option>
+    </select>
+  </table>
+</div>
+
+<!-- Hiển thị sản phẩm -->
+<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+  <div *ngFor="let product of pagedProducts | search: searchTerm: 'name'" class="bg-white p-4 shadow-md rounded-lg">
+    <h2 class="text-xl font-semibold mb-2"><a routerLink="/products/{{product._id}}">{{ product.name }}</a></h2>
+    <p class="mb-4">{{ product.description }}</p>
+    <p class="text-gray-600">{{ product.price }}</p>
+    <img [src]="product.image" [alt]="product.name" class="w-full h-40 object-cover rounded-lg mb-2">
+  </div>
+</div>
+
+<!-- Phân trang -->
+<div class="mt-4">
+  <nav class="flex justify-center">
+    <ul class="flex items-center">
+      <li class="mr-2">
+        <button class="bg-gray-200 hover:bg-gray-300 px-3 py-1 rounded-md" (click)="previousPage()">Previous</button>
+      </li>
+      <li class="mr-2">
+        <button class="bg-gray-200 hover:bg-gray-300 px-3 py-1 rounded-md" (click)="nextPage()">Next</button>
+      </li>
+    </ul>
+  </nav>
+</div>

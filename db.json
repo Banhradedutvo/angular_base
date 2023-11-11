@@ -1,0 +1,180 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Nam"
+    },
+    {
+      "id": 2,
+      "name": "Nữ"
+    },
+    {
+      "id": 3,
+      "name": "Khác"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Áo phông nam",
+      "price": 99.999,
+      "description": "Áo phông nam màu trắng, kiểu dáng thời trang, chất liệu cotton cao cấp. Phù hợp cho mọi dịp.",
+      "image": "https://picsum.photos/200/300",
+      "id_category": "1"
+    },
+    {
+      "id": 2,
+      "name": "Quần jean nữ",
+      "price": 159.99,
+      "description": "Quần jean nữ màu xanh đậm, chất liệu denim cao cấp, ôm sát và thoải mái. Tạo nên phong cách cá nhân của bạn.",
+      "image": "https://picsum.photos/200/300",
+      "id_category": 2
+    },
+    {
+      "id": 3,
+      "name": "Giày thể thao",
+      "price": 299.99,
+      "description": "Giày thể thao nam màu đen, phong cách hiện đại, đế cao su chống trơn trượt. Đồng hành cùng bạn trong mọi hoạt động thể thao.",
+      "image": "https://picsum.photos/200/300",
+      "id_category": 1
+    },
+    {
+      "id": 4,
+      "name": "Đầm dạ hội",
+      "price": 249.99,
+      "description": "Đầm dạ hội nữ sang trọng, phù hợp cho các dịp đặc biệt như tiệc cưới, lễ hội. Chất liệu cao cấp và thiết kế tinh tế.",
+      "image": "https://picsum.photos/200/300",
+      "id_category": 1
+    },
+    {
+      "id": 5,
+      "name": "Balo du lịch",
+      "price": 89.99,
+      "description": "Balo du lịch chất liệu chống nước, nhiều ngăn tiện lợi, dung tích lớn. Đồng hành cùng bạn trên mọi chuyến đi.",
+      "image": "https://picsum.photos/200/300",
+      "id_category": 1
+    },
+    {
+      "id": 6,
+      "name": "Đồng hồ nam",
+      "price": 499.99,
+      "description": "Đồng hồ nam mạ vàng, dây da cao cấp, chống nước 50m. Mang đến phong cách lịch lãm và sang trọng.",
+      "image": "https://picsum.photos/200/300",
+      "id_category": 2
+    },
+    {
+      "id": 7,
+      "name": "Ví nữ",
+      "price": 79.99,
+      "description": "Ví nữ da thật, nhiều ngăn đựng tiện dụng, thiết kế nhỏ gọn. Điểm nhấn hoàn hảo cho phong cách của bạn.",
+      "image": "https://picsum.photos/200/300",
+      "id_category": 1
+    },
+    {
+      "id": 8,
+      "name": "Áo khoác nam",
+      "price": 179.99,
+      "description": "Áo khoác nam chất liệu dù, cổ cao giữ ấm tốt, thiết kế hiện đại. Đồng hành cùng bạn trong mùa đông lạnh giá.",
+      "image": "https://picsum.photos/200/300",
+      "id_category": 2
+    },
+    {
+      "id": 9,
+      "name": "Váy công sở",
+      "price": 129.99,
+      "description": "Váy công sở nữ thanh lịch, phù hợp môi trường làm việc, chất liệu thoáng mát. Tự tin và nổi bật trong công việc.",
+      "image": "https://picsum.photos/200/300",
+      "id_category": 1
+    },
+    {
+      "id": 10,
+      "name": "Giày cao gót",
+      "price": 199.99,
+      "description": "Giày cao gót nữ màu đỏ, kiểu dáng đẹp, thoải mái. Tạo nên sự quyến rũ và tự tin cho ngày đặc biệt.",
+      "image": "https://picsum.photos/200/300",
+      "id_category": 2
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "Hello World",
+      "content": "Chào các bạn, đây là bài viết đầu tiên của tôi",
+      "author": "John Doe",
+      "date": "01/01/2023",
+      "image": "https://picsum.photos/200/300"
+    },
+    {
+      "id": 2,
+      "title": "Học lập trình web",
+      "content": "Hôm nay tôi học cách xây dựng trang web đơn giản bằng HTML và CSS",
+      "author": "Jane Doe",
+      "date": "02/01/2023",
+      "image": "https://picsum.photos/200/300"
+    },
+    {
+      "id": 3,
+      "title": "MongoDB cho người mới bắt đầu",
+      "content": "Đây là hướng dẫn cơ bản về cách sử dụng MongoDB",
+      "author": "John Doe",
+      "date": "03/01/2023",
+      "image": "https://picsum.photos/200/300"
+    },
+    {
+      "id": 4,
+      "title": "Cách đăng ký tài khoản GitHub",
+      "content": "Bài hướng dẫn cách tạo tài khoản GitHub và sử dụng cơ bản",
+      "author": "Mary Doe",
+      "date": "04/01/2023",
+      "image": "https://picsum.photos/200/300"
+    },
+    {
+      "id": 5,
+      "title": "Làm việc nhóm trên Git",
+      "content": "Hướng dẫn sử dụng Git để quản lý dự án thông qua GitHub",
+      "author": "John Doe",
+      "date": "05/01/2023",
+      "image": "https://picsum.photos/200/300"
+    },
+    {
+      "id": 6,
+      "title": "Bootstrap 101",
+      "content": "Giới thiệu cơ bản về framework Bootstrap và cách sử dụng",
+      "author": "Jane Doe",
+      "date": "06/01/2023",
+      "image": "https://picsum.photos/200/300"
+    },
+    {
+      "id": 7,
+      "title": "Tailwind CSS - Thay thế Bootstrap?",
+      "content": "So sánh Tailwind CSS và Bootstrap, khám phá những ưu điểm của Tailwind",
+      "author": "Mary Doe",
+      "date": "07/01/2023",
+      "image": "https://picsum.photos/200/300"
+    },
+    {
+      "id": 8,
+      "title": "React Hooks cơ bản",
+      "content": "Tìm hiểu về các React Hooks phổ biến và cách áp dụng trong React",
+      "author": "John Doe",
+      "date": "08/01/2023",
+      "image": "https://picsum.photos/200/300"
+    },
+    {
+      "id": 9,
+      "title": "Deployment web bằng Vercel",
+      "content": "Cách triển khai ứng dụng React lên Vercel một cách dễ dàng",
+      "author": "Mary Doe",
+      "date": "09/01/2023",
+      "image": "https://picsum.photos/200/300"
+    },
+    {
+      "id": 10,
+      "title": "JavaScript ES6 nâng cao",
+      "content": "Khám phá các tính năng mới trong ES6 như Arrow Function, Modules...",
+      "author": "Jane Doe",
+      "date": "10/01/2023",
+      "image": "https://picsum.photos/200/300"
+    }
+  ]
+}

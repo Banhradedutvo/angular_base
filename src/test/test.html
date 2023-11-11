@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Tự động Chat</title>
+</head>
+<body>
+  <h1>Tự động Chat</h1>
+
+  <div id="chat-container">
+    <div id="chat-messages"></div>
+    <input type="text" id="chat-input" placeholder="Nhập tin nhắn...">
+    <input type="number" id="repeat-input" placeholder="Số lần lặp lại">
+    <input type="number" id="delay-input" placeholder="Thời gian chờ (giây)">
+    <button id="send-button">Gửi</button>
+  </div>
+
+  <script>
+    const chatMessages = document.getElementById('chat-messages');
+    const chatInput = document.getElementById('chat-input');
+    const repeatInput = document.getElementById('repeat-input');
+    const delayInput = document.getElementById('delay-input');
+    const sendButton = document.getElementById('send-button');
+    let isChatting = false;
+    let counter = 1;
+
+    sendButton.addEventListener('click', startChatting);
+
+    function startChatting() {
+      if (isChatting) {
+        return;
+      }
+
+      const message = chatInput.value;
+      const repeatCount = parseInt(repeatInput.value);
+      const delay = parseInt(delayInput.value) * 1000;
+
+      if (message && repeatCount && delay) {
+        isChatting = true;
+        chatInput.disabled = true;
+        repeatInput.disabled = true;
+        delayInput.disabled = true;
+
+        sendMessages(message, repeatCount, delay)
+          .then(() => {
+            isChatting = false;
+            chatInput.disabled = false;
+            repeatInput.disabled = false;
+            delayInput.disabled = false;
+          });
+      }
+    }
+
+    function sendMessages(message, repeatCount, delay) {
+      return new Promise(resolve => {
+        let count = 0;
+
+        function sendMessage() {
+          count++;
+          const sender = `${counter}`;
+          counter++;
+
+          displayMessage(sender, message);
+
+          if (count < repeatCount) {
+            setTimeout(sendMessage, delay);
+          } else {
+            resolve();
+          }
+        }
+
+        setTimeout(sendMessage, delay);
+      });
+    }
+
+    function displayMessage(sender, message) {
+      const messageElement = document.createElement('div');
+      messageElement.innerHTML = `${sender} ${message}`;
+      chatMessages.appendChild(messageElement);
+    }
+  </script>
+</body>
+</html>

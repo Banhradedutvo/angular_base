@@ -1,0 +1,62 @@
+<div *ngIf="product; else loadingTemplate">
+  <h2>Cập nhật sản phẩm</h2>
+  <form [formGroup]="updateForm" (ngSubmit)="updateProduct()" class="space-y-4">
+    <div>
+      <label for="name" class="block font-medium">Tên:</label>
+      <input type="text" id="name" formControlName="name" required class="border border-gray-300 px-4 py-2 rounded-md w-full"
+        pattern="^(?!\s*$).+">
+      <div *ngIf="updateForm.get('name')?.hasError('required') && updateForm.get('name')?.touched" class="text-red-600 mt-1">
+        Tên không được bỏ trống.
+      </div>
+      <div *ngIf="updateForm.get('name')?.hasError('pattern')" class="text-red-600 mt-1">
+        Tên không được chỉ chứa khoảng trắng.
+      </div>
+    </div>
+    <div>
+      <label for="image" class="block font-medium">Link ảnh:</label>
+      <input type="text" id="image" formControlName="image" required class="border border-gray-300 px-4 py-2 rounded-md w-full"
+        pattern="^(?!\s*$).+">
+      <div *ngIf="updateForm.get('image')?.hasError('required') && updateForm.get('image')?.touched" class="text-red-600 mt-1">
+        Link ảnh không được bỏ trống.
+      </div>
+      <div *ngIf="updateForm.get('image')?.hasError('pattern')" class="text-red-600 mt-1">
+        Link ảnh không được chỉ chứa khoảng trắng.
+      </div>
+    </div>
+    <div>
+      <label for="price" class="block font-medium">Giá:</label>
+      <input type="number" id="price" formControlName="price" required class="border border-gray-300 px-4 py-2 rounded-md w-full">
+      <div *ngIf="updateForm.get('price')?.hasError('required') && updateForm.get('price')?.touched" class="text-red-600 mt-1">
+        Giá không được bỏ trống.
+      </div>
+    </div>
+    <div>
+      <label for="description" class="block font-medium">Mô tả:</label>
+      <textarea id="description" formControlName="description" required class="border border-gray-300 px-4 py-2 rounded-md w-full"
+        pattern="^(?!\s*$).{6,}"></textarea>
+      <div *ngIf="updateForm.get('description')?.hasError('required') && updateForm.get('description')?.touched" class="text-red-600 mt-1">
+        Mô tả không được bỏ trống.
+      </div>
+      <div *ngIf="updateForm.get('description')?.hasError('pattern')" class="text-red-600 mt-1">
+        Mô tả không được chỉ chứa khoảng trắng và phải có ít nhất 6 ký tự.
+      </div>
+    </div>
+    <div>
+      <label for="id_category" class="block font-medium">Mã danh mục:</label>
+      <input type="text" id="id_category" formControlName="id_category" required class="border border-gray-300 px-4 py-2 rounded-md w-full"
+        pattern="^(?!\s*$).+">
+      <div *ngIf="updateForm.get('id_category')?.hasError('required') && updateForm.get('id_category')?.touched" class="text-red-600 mt-1">
+        Mã danh mục không được bỏ trống.
+      </div>
+      <div *ngIf="updateForm.get('id_category')?.hasError('pattern')" class="text-red-600 mt-1">
+        Mã danh mục không được chỉ chứa khoảng trắng.
+      </div>
+    </div>
+    <button type="submit" [disabled]="updateForm.invalid" class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md">Cập nhật</button>
+  </form>
+  <div *ngIf="showSuccessMessage" class="mt-4 text-green-600">Sản phẩm được cập nhật thành công</div>
+  <div *ngIf="showErrorMessage" class="mt-4 text-red-600">Cập nhật thất bại. Vui lòng thử lại.</div>
+</div>
+<ng-template #loadingTemplate>
+  <app-loading-page/>
+</ng-template>
